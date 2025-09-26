@@ -1,0 +1,28 @@
+/* Minimal, clean styles for a one-page app site */
+:root {
+  --text: #0b1221;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --bg: #ffffff;
+}
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 40px 20px; }
+.hero { padding-top: 64px; padding-bottom: 32px; }
+.brand { text-align: center; }
+.logo { width: 56px; height: 56px; margin-bottom: 12px; }
+h1 { font-size: 44px; line-height: 1.2; margin: 0 0 8px; }
+.lead { font-size: 20px; color: var(--muted); margin: 0 auto; max-width: 720px; }
+.cta-row { display: flex; gap: 16px; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+a.store img { height: 60px; }
+a.ghost { border: 1px solid var(--line); padding: 12px 16px; border-radius: 12px; text-decoration: none; color: var(--text); }
+h2 { font-size: 28px; margin: 24px 0 12px; }
+.screenshots { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); align-items: start; }
+.screenshots figure { margin: 0; text-align: center; }
+.screenshots img { width: 100%; border-radius: 24px; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.screenshots figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; }
+.footer { border-top: 1px solid var(--line); text-align: center; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0b0f1a; --text: #e5e7eb; --muted: #94a3b8; --line:#1f2937; }
+  a.ghost { border-color: #374151; }
+}
