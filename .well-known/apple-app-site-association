@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["J464NUJUFQ.com.PatMaloney.FanVest"],
+        "components": [
+          {
+            "/": "/fantasy/current-contest"
+          },
+          {
+            "/": "/fantasy/current-contest/*"
+          }
+        ]
+      }
+    ]
+  }
+}
