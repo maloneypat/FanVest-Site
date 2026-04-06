@@ -9,6 +9,12 @@
           },
           {
             "/": "/fantasy/current-contest/*"
+          },
+          {
+            "/": "/fantasy/previous-contests"
+          },
+          {
+            "/": "/fantasy/previous-contests/*"
           }
         ]
       }
