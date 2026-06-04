@@ -32,3 +32,71 @@ h2 { font-size: 28px; margin: 24px 0 12px; }
   :root { --bg: #0b0f1a; --text: #e5e7eb; --muted: #94a3b8; --line:#1f2937; }
   a.ghost { border-color: #374151; }
 }
+
+.invite-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.08), rgba(14, 165, 233, 0.05));
+}
+.eyebrow {
+  margin: 0 0 8px;
+  color: #16a34a;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.invite-code-panel {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 24px;
+  padding: 16px 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+}
+.invite-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#invite-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: clamp(24px, 5vw, 42px);
+  letter-spacing: 0.08em;
+  user-select: all;
+}
+.primary-link {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: white;
+  font-weight: 800;
+}
+.button-link {
+  cursor: pointer;
+  background: transparent;
+  font: inherit;
+}
+.button-link:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.small-status {
+  min-height: 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.invite-steps ol {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+@media (prefers-color-scheme: dark) {
+  .invite-card { background: linear-gradient(180deg, rgba(34, 197, 94, 0.14), rgba(14, 165, 233, 0.08)); }
+  .invite-code-panel { background: rgba(15, 23, 42, 0.7); }
+}

@@ -5,6 +5,12 @@
         "appIDs": ["J464NUJUFQ.com.PatMaloney.FanVest"],
         "components": [
           {
+            "/": "/invite"
+          },
+          {
+            "/": "/invite/*"
+          },
+          {
             "/": "/fantasy/current-contest"
           },
           {
