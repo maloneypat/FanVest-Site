@@ -29,16 +29,8 @@
         Open FanVest to accept or decline this friend invite. If you do not have the app yet, install it, then return to this invite page and tap Open in FanVest.
       </p>
 
-      <div class="invite-code-panel" aria-live="polite">
-        <span class="invite-label">Invite Code</span>
-        <strong id="invite-code">Loading...</strong>
-      </div>
-
-      <p class="small-status">This invite link can be accepted by one person only. Keep this code handy and enter it manually in FanVest if Open in FanVest does not load the invite.</p>
-
       <div class="cta-row">
         <a id="open-app-link" class="ghost primary-link" href="fanvest://friend-invite">Open in FanVest</a>
-        <button id="copy-code-button" class="ghost button-link" type="button">Copy Invite Code</button>
         <a class="store" href="https://apps.apple.com/us/app/fanvest/id6743630515" target="_blank" rel="noopener">
           <img
             src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
@@ -47,7 +39,6 @@
         </a>
       </div>
 
-      <p id="copy-status" class="small-status" role="status"></p>
     </div>
   </header>
 
@@ -58,7 +49,6 @@
         <li>If FanVest is already installed, tap Open in FanVest.</li>
         <li>If FanVest is not installed, tap Download on the App Store.</li>
         <li>After installing, return to this invite page and tap Open in FanVest.</li>
-        <li>If that does not open the invite, copy the invite code and enter it in FanVest under Enter Invite Code.</li>
       </ol>
     </section>
   </main>
@@ -77,30 +67,14 @@
     const pathParts = window.location.pathname.split('/').filter(Boolean);
     const tokenFromPath = pathParts[0] === 'invite' && pathParts[1] ? pathParts[1] : '';
     const token = (tokenFromQuery || tokenFromPath).toUpperCase().replace(/[^A-Z0-9]/g, '');
-    const codeElement = document.getElementById('invite-code');
     const openAppLink = document.getElementById('open-app-link');
-    const copyButton = document.getElementById('copy-code-button');
-    const copyStatus = document.getElementById('copy-status');
 
     if (token) {
-      codeElement.textContent = token;
       openAppLink.href = `fanvest://friend-invite?token=${encodeURIComponent(token)}`;
     } else {
-      codeElement.textContent = 'Missing invite code';
       openAppLink.href = 'fanvest://fantasyView';
-      copyButton.disabled = true;
-      copyStatus.textContent = 'Ask your friend to resend the invite link.';
+      openAppLink.textContent = 'Open FanVest';
     }
-
-    copyButton.addEventListener('click', async () => {
-      if (!token) return;
-      try {
-        await navigator.clipboard.writeText(token);
-        copyStatus.textContent = 'Invite code copied.';
-      } catch (error) {
-        copyStatus.textContent = 'Copy failed. Press and hold the code to copy it.';
-      }
-    });
   </script>
 </body>
 </html>
