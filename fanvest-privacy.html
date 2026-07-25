@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FanVest Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for the FanVest app. Learn what data we collect (contest entries, CloudKit sync) and how we use it. No payments.">
+  <meta name="description" content="Privacy Policy for FanVest contests, achievements, Friends, Sign in with Apple, and CloudKit-backed services.">
   <meta name="robots" content="index,follow" />
   <meta property="og:title" content="FanVest — Privacy Policy" />
-  <meta property="og:description" content="Privacy Policy for the FanVest app. Free contests, CloudKit sync, no paid features." />
+  <meta property="og:description" content="Privacy information for FanVest contests, achievements, and Friends." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/images/og-cover.png" />
   <meta property="og:url" content="https://fanvestapp.com/privacy" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="FanVest — Privacy Policy" />
-  <meta name="twitter:description" content="Privacy Policy for the FanVest app. Free contests, CloudKit sync, no paid features." />
+  <meta name="twitter:description" content="Privacy information for FanVest contests, achievements, and Friends." />
   <link rel="icon" href="/favicon.ico" />
   <style>
     :root {
@@ -42,7 +42,7 @@
   <main class="wrap">
     <header>
       <h1>FanVest Privacy Policy</h1>
-      <div class="sub">Effective Date: September 29, 2025</div>
+      <div class="sub">Effective Date: July 25, 2026</div>
     </header>
 
     <section class="card">
@@ -51,14 +51,21 @@
       <h2>1. Information We Collect</h2>
       <ul>
         <li><strong>Contest Participation Data</strong>: We store your contest entries, portfolio allocations, and leaderboard results to operate contests.</li>
+        <li><strong>Achievement Data</strong>: We process badge progress, rank points, and the events needed to calculate them.</li>
+        <li><strong>Friends Account Data</strong>: If you use Friends, Sign in with Apple provides an account identifier. We also process sessions, invitations, accepted or blocked relationships, private notes, and account-deletion state.</li>
+        <li><strong>Friends Safety Data</strong>: If you submit a report, we process the selected reason, optional details, the accounts involved, and operational information needed to investigate abuse.</li>
+        <li><strong>Device Integrity and Operations Data</strong>: We may process App Attest evidence, rate-limit state, request identifiers, security audits, and error diagnostics to protect Friends and operate the service.</li>
         <li><strong>Device &amp; Usage Data</strong>: Basic diagnostic and crash data may be collected automatically by Apple to help us improve performance.</li>
         <li><strong>iCloud / CloudKit Data</strong>: Your contest data and profile information may be synced securely using Apple’s CloudKit services.</li>
       </ul>
-      <p>We do <strong>not</strong> collect payment information or sensitive personal data.</p>
+      <p>FanVest does <strong>not</strong> collect payment information. Friends is optional and is separate from your Fantasy Invest contest identity until you explicitly link them.</p>
 
       <h2>2. How We Use Information</h2>
       <ul>
         <li>Run free fantasy investment contests and leaderboards.</li>
+        <li>Calculate achievement progress and show a minimal badge summary to accepted friends.</li>
+        <li>Create, validate, claim, expire, and revoke one-time friend invitations.</li>
+        <li>Operate Friends relationships, private notes, blocking, abuse reporting, security, and account deletion.</li>
         <li>Sync your contest data across your devices via iCloud.</li>
         <li>Improve and support the App.</li>
       </ul>
@@ -67,6 +74,8 @@
       <h2>3. Data Sharing</h2>
       <ul>
         <li><strong>With Apple Services</strong>: We rely on Apple services (iCloud/CloudKit, TestFlight) for secure storage and testing.</li>
+        <li><strong>With Accepted Friends</strong>: Accepted friends may see the social display information and minimal achievement summary required for Friends features. Private notes and reports are not shared with the other player.</li>
+        <li><strong>With Service Providers</strong>: Hosting and infrastructure providers may process information only to operate and secure FanVest on our behalf.</li>
         <li><strong>Legal Requirements</strong>: We may disclose information if required by law, regulation, or legal process.</li>
       </ul>
       <p>We do not share user information with advertisers or data brokers.</p>
@@ -74,17 +83,22 @@
       <h2>4. Data Storage and Security</h2>
       <ul>
         <li>Contest data is stored in Apple’s <strong>CloudKit</strong> public and private databases, protected by Apple’s security infrastructure.</li>
+        <li>Friends authorization and social operations are processed by FanVest’s backend. Invitation secrets are one-time bearer credentials; the backend stores a non-reversible digest rather than the link secret.</li>
+        <li>The invitation website does not send the link fragment to its hosting origin, does not validate invitations, and does not use invite-page analytics.</li>
         <li>We take reasonable measures to protect your data, but no system is completely secure.</li>
       </ul>
 
-      <h2>5. Your Choices</h2>
+      <h2>5. Retention and Deletion</h2>
       <ul>
-        <li>If you wish to delete your FanVest data, please contact us at <a href="mailto:info@fanvestapp.com">info@fanvestapp.com</a>.</li>
+        <li>One-time invitations expire after seven days and can be cancelled sooner by the sender. Operational records are retained only as long as reasonably necessary for security, support, and legal obligations.</li>
+        <li><strong>Delete Friends Profile</strong> in the App removes Friends sign-in, invitations, relationships, private notes, social identity links, and shared achievement summaries. This does not delete Fantasy Invest contest history.</li>
+        <li>Private abuse reports may be retained or irreversibly anonymized when reasonably necessary for safety or legal obligations, even after Friends Profile deletion.</li>
+        <li>To request deletion of other applicable FanVest data, contact <a href="mailto:info@fanvestapp.com">info@fanvestapp.com</a>.</li>
         <li>You can manage iCloud settings on your device in Settings &gt; [your name] &gt; iCloud.</li>
       </ul>
 
       <h2>6. Children’s Privacy</h2>
-      <p>FanVest is intended for users <strong>13 years and older</strong>. We do not knowingly collect data from children under 13.</p>
+      <p>FanVest and Friends are intended for users <strong>13 years and older</strong>. We do not knowingly collect personal information from children under 13. Contact us if you believe a child under 13 has provided information.</p>
 
       <h2>7. Changes to This Policy</h2>
       <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a new effective date.</p>
@@ -98,7 +112,7 @@
     </section>
 
     <footer>
-      © 2025 FanVest. All rights reserved.
+      © 2026 FanVest. All rights reserved.
     </footer>
   </main>
 </body>
