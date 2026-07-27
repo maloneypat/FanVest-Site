@@ -32,8 +32,10 @@ grep -Fq "connect-src 'none'" "$invite_html" || fail "invite-page connections ar
 grep -Fq 'return to the original invitation in Messages' "$invite_html" ||
   fail "post-install Messages guidance is missing"
 grep -Fq 'id6743630515' "$invite_html" || fail "App Store destination changed"
+grep -Fq 'src="/invite/invite.js?v=1"' "$invite_html" || fail "versioned invitation script is missing"
 grep -Fq 'window.location.hash' "$invite_script" || fail "fragment parser is missing"
 grep -Fq '/^[A-Za-z0-9_-]{43}$/' "$invite_script" || fail "browser token validation changed"
+grep -Fq "addEventListener('hashchange'" "$invite_script" || fail "fragment navigation refresh is missing"
 
 if grep -Eqi 'friend[ -]?code|inviteToken|location\.search|friend-invite\?token|fanvest://friend-invite' \
   "$invite_html" "$invite_script"; then
