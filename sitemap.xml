@@ -7,13 +7,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://fanvestapp.com/fantasy/current-contest</loc>
+    <loc>https://fanvestapp.com/fantasy/contest</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fanvestapp.com/invite</loc>
+    <loc>https://fanvestapp.com/fantasy/player-profile</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
   </url>
 </urlset>

@@ -17,10 +17,22 @@
             "/": "/fantasy/current-contest/*"
           },
           {
+            "/": "/fantasy/contest"
+          },
+          {
+            "/": "/fantasy/contest/*"
+          },
+          {
             "/": "/fantasy/previous-contests"
           },
           {
             "/": "/fantasy/previous-contests/*"
+          },
+          {
+            "/": "/fantasy/player-profile"
+          },
+          {
+            "/": "/fantasy/player-profile/*"
           }
         ]
       }
