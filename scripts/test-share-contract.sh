@@ -41,4 +41,9 @@ for html in "$contest_html" "$profile_html"; do
   fi
 done
 
+for html in "$contest_html" "$profile_html" "$legacy_current_html" "$legacy_previous_html"; do
+  grep -Fq 'href="https://fanvestapp.com/download/in-app-share"' "$html" ||
+    fail "share fallback page does not use the In App Share campaign route"
+done
+
 echo "Share contract checks passed."

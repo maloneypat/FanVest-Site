@@ -31,7 +31,8 @@ grep -Fq 'http-equiv="Cache-Control" content="no-store"' "$invite_html" || fail 
 grep -Fq "connect-src 'none'" "$invite_html" || fail "invite-page connections are not disabled"
 grep -Fq 'return to the original invitation in Messages' "$invite_html" ||
   fail "post-install Messages guidance is missing"
-grep -Fq 'id6743630515' "$invite_html" || fail "App Store destination changed"
+grep -Fq 'href="https://fanvestapp.com/download/friend-invite"' "$invite_html" ||
+  fail "Friend Invite campaign route changed"
 grep -Fq 'src="/invite/invite.js?v=1"' "$invite_html" || fail "versioned invitation script is missing"
 grep -Fq 'window.location.hash' "$invite_script" || fail "fragment parser is missing"
 grep -Fq '/^[A-Za-z0-9_-]{43}$/' "$invite_script" || fail "browser token validation changed"
