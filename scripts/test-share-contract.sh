@@ -9,6 +9,7 @@ legacy_current_html="$site_root/fantasy/current-contest/index.html"
 legacy_previous_html="$site_root/fantasy/previous-contests/index.html"
 invite_html="$site_root/invite/index.html"
 sitemap="$site_root/sitemap.xml"
+share_banner="$site_root/images/fanvest-share-banner.png"
 
 fail() {
   echo "Share contract check failed: $1" >&2
@@ -45,5 +46,18 @@ for html in "$contest_html" "$profile_html" "$legacy_current_html" "$legacy_prev
   grep -Fq 'href="https://fanvestapp.com/download/in-app-share"' "$html" ||
     fail "share fallback page does not use the In App Share campaign route"
 done
+
+for html in "$contest_html" "$profile_html" "$legacy_current_html" "$legacy_previous_html"; do
+  grep -Fq 'https://fanvestapp.com/images/fanvest-share-banner.png' "$html" ||
+    fail "share fallback page does not use the wide Open Graph banner"
+  grep -Fq 'property="og:image:width" content="1200"' "$html" ||
+    fail "share fallback page does not declare the Open Graph banner width"
+  grep -Fq 'property="og:image:height" content="630"' "$html" ||
+    fail "share fallback page does not declare the Open Graph banner height"
+done
+
+dimensions=$(sips -g pixelWidth -g pixelHeight "$share_banner" 2>/dev/null)
+echo "$dimensions" | grep -Fq 'pixelWidth: 1200' || fail "share banner width must be 1200 pixels"
+echo "$dimensions" | grep -Fq 'pixelHeight: 630' || fail "share banner height must be 630 pixels"
 
 echo "Share contract checks passed."
