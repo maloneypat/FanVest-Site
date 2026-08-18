@@ -42,7 +42,7 @@
   <main class="wrap">
     <header>
       <h1>FanVest Privacy Policy</h1>
-      <div class="sub">Effective Date: July 25, 2026</div>
+      <div class="sub">Effective Date: August 18, 2026</div>
     </header>
 
     <section class="card">
@@ -56,6 +56,7 @@
         <li><strong>Friends Safety Data</strong>: If you submit a report, we process the selected reason, optional details, the accounts involved, and operational information needed to investigate abuse.</li>
         <li><strong>Device Integrity and Operations Data</strong>: We may process App Attest evidence, rate-limit state, request identifiers, security audits, and error diagnostics to protect Friends and operate the service.</li>
         <li><strong>Device &amp; Usage Data</strong>: Basic diagnostic and crash data may be collected automatically by Apple to help us improve performance.</li>
+        <li><strong>Download Link Counts</strong>: When an automatic FanVest download link is used, our backend stores aggregate daily request counts by channel. It does not store an IP address, cookie, referrer, query parameter, or persistent identifier for this measurement. A request’s user-agent may be inspected transiently to separate known automated requests, but it is not stored.</li>
         <li><strong>iCloud / CloudKit Data</strong>: Your contest data and profile information may be synced securely using Apple’s CloudKit services.</li>
       </ul>
       <p>FanVest does <strong>not</strong> collect payment information. Friends is optional and is separate from your Fantasy Invest contest identity until you explicitly link them.</p>
@@ -68,6 +69,7 @@
         <li>Operate Friends relationships, private notes, blocking, abuse reporting, security, and account deletion.</li>
         <li>Sync your contest data across your devices via iCloud.</li>
         <li>Improve and support the App.</li>
+        <li>Measure aggregate download-link requests by acquisition channel without building individual visitor profiles.</li>
       </ul>
       <p>We do <strong>not</strong> sell your personal information to third parties.</p>
 
@@ -85,6 +87,7 @@
         <li>Contest data is stored in Apple’s <strong>CloudKit</strong> public and private databases, protected by Apple’s security infrastructure.</li>
         <li>Friends authorization and social operations are processed by FanVest’s backend. Invitation secrets are one-time bearer credentials; the backend stores a non-reversible digest rather than the link secret.</li>
         <li>The invitation website does not send the link fragment to its hosting origin, does not validate invitations, and does not use invite-page analytics.</li>
+        <li>Automatic download links pass through FanVest’s Fly.io-hosted backend. FanVest persists only the aggregate daily channel counts described above; the direct App Store link remains available as a manual fallback.</li>
         <li>We take reasonable measures to protect your data, but no system is completely secure.</li>
       </ul>
 
